@@ -1,0 +1,259 @@
+.frame-login {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f9f9f9;
+  flex-direction: column;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 40px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 22px;
+}
+
+/* Grup input (ikon + kotak teks) */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.input-group i {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: #888;
+}
+
+/* Desain garis bawah pada kotak input */
+.input-group input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Efek saat kotak input diklik */
+.input-group input:focus {
+  border-bottom: 2px solid #f0ad4e;
+}
+
+/* Link Lupa Password */
+.forgot-password {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: #8bbce0;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+/* Tombol Masuk */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #fbd660;
+  color: #555;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.login-btn:hover {
+  background-color: #f0c340;
+}
+
+/* Link Belum punya akun */
+.register-link {
+  font-size: 13px;
+  color: #8bbce0;
+  text-decoration: none;
+}
+
+/* Latar belakang gelap (Meredupkan halaman belakang) */
+.modal-overlay {
+  display: none;
+  /* Awalnya disembunyikan */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Hitam transparan */
+  z-index: 9999;
+  /* Memaksa elemen selalu di paling depan layar */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Penyesuaian Kotak Putih */
+.modal-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  /* Perintah ini yang memaksa teks & tombol ke tengah */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+/* Desain Tombol Kembali */
+.btn-tutup {
+  background-color: #fbbf24;
+  /* Membuat tombol menjadi kuning */
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  /* Membuat tombol membentang penuh dari kiri ke kanan */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+  /* Memberi jarak antara teks dan tombol */
+}
+
+.btn-tutup:hover {
+  background-color: #f59e0b;
+}
+
+/* Animasi Muncul Lembut */
+@keyframes munculSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desain Header (Judul & Tombol Silang) */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.tombol-silang {
+  font-size: 24px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.tombol-silang:hover {
+  color: #d9534f;
+  /* Berubah merah saat disorot */
+}
+
+/* Desain Area Konten */
+.modal-body {
+  padding: 20px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Desain Footer (Tombol Aksi) */
+.modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  justify-content: flex-end;
+  /* Mendorong tombol ke kanan */
+  gap: 10px;
+  /* Memberi jarak antar tombol */
+}
+
+/* Desain Tombol Standar */
+.btn-batal,
+.btn-aksi {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-batal {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.btn-batal:hover {
+  background-color: #e2e2e2;
+}
+
+.btn-aksi {
+  background-color: #fbbf24;
+  /* Warna kuning menyesuaikan tema login Anda */
+  color: #000;
+}
+
+.btn-aksi:hover {
+  background-color: #f59e0b;
+}
+
+.kolom-hover {
+  position: relative;
+  cursor: help;
+}
+
+/* Kotak tooltip disembunyikan menggunakan opacity & visibility agar tidak bentrok dengan Bootstrap */
+.tooltip-catatan {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #212529;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1050;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Munculkan tooltip saat kolom di-hover */
+.kolom-hover:hover .tooltip-catatan {
+  visibility: visible;
+  opacity: 1;
+}
